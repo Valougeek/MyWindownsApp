@@ -1,14 +1,15 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+  <ion-content padding class="card-background-page">
+    <div *ngIf="listPhotographers">
+      <ion-card *ngFor="let photographer of listPhotographers" (click)="goToPhotosPhotographer( photographer.name)">
+        <ion-card>
+          <img src="{{photographer.urlPicture}}">
+          <ion-card-content>
+            <ion-card-title>
+              {{photographer.title}}
+            </ion-card-title>
+            <p>
+              {{photographer.description}}
+            </p>
+          </ion-card-content>
+        </ion-card>
+        
