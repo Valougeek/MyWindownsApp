@@ -9,14 +9,12 @@ export class Photo {
     constructor(public urlPhoto: string = "", public photographer: string = "") {
     }
     
-    
-}
-
-var photosPhotographer = function (nomPhotographer: string): void {
-    for (var i = 0; i < ListPhotos.length; i++) {
-        if (nomPhotographer == ListPhotos[i].photographer) {
-            this.listPhotosPhotographers.push(ListPhotos[i]);
+    photosPhotographer = function (nomPhotographer: string): void {
+        for (var i = 0; i < ListPhotos.length; i++) {
+            if (nomPhotographer == ListPhotos[i].photographer) {
+                this.listPhotosPhotographers.push(ListPhotos[i]);
+            }
+            console.log(this.listPhotosPhotographers);
         }
-        console.log(this.listPhotosPhotographers);
-    }
+}
 }
