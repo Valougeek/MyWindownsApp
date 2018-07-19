@@ -1,31 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Photo } from '../models/photo';
-import { dateDataSortValue } from '../../node_modules/ionic-angular/umd/util/datetime-util';
-import { PhotosPhotographerPage } from '../pages/photos-photographer/photos-photographer';
-import { Photographer } from '../models/photographer';
-
-
 
 @Injectable()
 export class ListPhotos {
 
-    listPhotos:Photo [] = [
-        new Photo("assets/imgs/cascade.jpg", "Yann Arthus-Bertrand"),
-        new Photo("assets/imgs/enfant.jpg", "Philip-Lorca DiCorcia" ),
-        new Photo("assets/imgs/envers.jpg", "Philip-Lorca DiCorcia"),
-        new Photo("assets/imgs/tourbillon.jpg", "Yann Arthus-Bertrand"),        
-        new Photo("assets/imgs/regard.jpg", "Steve Mc Cury"),
-        new Photo("assets/imgs/portrait.jpg", "Steve Mc Cury"),
-        new Photo("assets/imgs/homme.jpg", "Philip-Lorca DiCorcia"),
-        new Photo("assets/imgs/yab.jpg", "Yann Arthus-Bertrand"),
-        new Photo("assets/imgs/bar.jpg", "Philip-Lorca DiCorcia"),
-        new Photo("assets/imgs/corail.jpg", "Yann Arthus-Bertrand"),
-        new Photo("assets/imgs/ext.jpg", "Philip-Lorca DiCorcia"),
-        new Photo("assets/imgs/femme_africaine.jpg", "Steve Mc Cury"),
-        new Photo("assets/imgs/indou.jpg", "Steve Mc Cury"),
-        new Photo("assets/imgs/mer.jpg", "Yann Arthus-Bertrand"),
-        
-        
+    public listPhotos = [
+        new Photo("assets/imgs/Bar.jpg", "Bar", "Philip-Lorca DiCorcia"),
+        new Photo("assets/imgs/Cascade.jpg", "Cascade", "Yann-Arthus Bertrand"),
+        new Photo("assets/imgs/Corail.jpg", "Corail", "Yann-Arthus Bertrand"),
+        new Photo("assets/imgs/Enfant.jpg", "Enfant", "Philip-Lorca DiCorcia" ),
+        new Photo("assets/imgs/Envers.jpg", "Envers", "Philip-Lorca DiCorcia"),
+        new Photo("assets/imgs/Femme_afghane.jpg", "Femme afghane", "Steve Mc Cury"),
+        new Photo("assets/imgs/Femme_africaine.jpg", "Femme africaine", "Steve Mc Cury"),
+        new Photo("assets/imgs/Hindou.jpg", "Hindou", "Steve Mc Cury"),
+        new Photo("assets/imgs/Homme_del_taco.jpg", "Homme del taco", "Philip-Lorca DiCorcia"),
+        new Photo("assets/imgs/Palace.jpg", "Palace", "Philip-Lorca DiCorcia"),
+        new Photo("assets/imgs/Pecheur.jpg", "Pecheur", "Yann-Arthus Bertrand"),
+        new Photo("assets/imgs/Regard.jpg", "Regard", "Steve Mc Cury"),
+        new Photo("assets/imgs/Tourbillon.jpg", "Tourbillon", "Yann-Arthus Bertrand"),        
+        new Photo("assets/imgs/Yann-Arthus_Bertrand.jpg", "Yann-Arthus Bertrand")      
     ];
 
    

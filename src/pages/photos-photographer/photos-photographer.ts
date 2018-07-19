@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Photo} from '../../models/photo';
+import { ListPhotos } from '../../tools/listPhotos';
+import { Photo } from '../../models/photo';
+import { Photographer } from '../../models/photographer';
 
 /**
  * Generated class for the PhotosPhotographerPage page.
@@ -16,22 +18,36 @@ import { Photo} from '../../models/photo';
 })
 export class PhotosPhotographerPage {
 
-  
+  public listPhotosPhotographers: Array<Photo> = new Array<Photo>();
+  public listPhotos: Array<Photo> = new Array<Photo>();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
-    // let p= new Photo ("Steve" , "assests/imgs/bar.jpg");
-    // console.log(p);
+  constructor(public navCtrl: NavController, public navParams: NavParams, public list: ListPhotos) {
+
+    this.listPhotos = list.listPhotos;
+    //console.log(this.listPhotos);
+
   }
 
   ionViewDidLoad() {
-    let s:string = this.navParams.get('photographer');
-    console.log(s);
+    this.photosPhotographer();
 
-    let p:Photo;
-    console.log(p);
-    
-    //photosPhotographer(s);
-  
   }
+
+  photosPhotographer() {
+    let s: Photographer = this.navParams.get('photographer');
+    //console.log(s.name);
+
+    for (let Photo of this.listPhotos) {
+      // console.log(Photo);
+      if (s.name == Photo.photographer) {
+        this.listPhotosPhotographers.push(Photo);
+      }
+    }
+    console.log(this.listPhotosPhotographers);
+  }
+
+  popView() {
+    this.navCtrl.pop();
+  }
+
 }

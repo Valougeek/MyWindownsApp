@@ -26,10 +26,12 @@ export class TabsPage {
     this.rootHome = HomePage;
     this.rootPage1 = Page1Page;
     this.rootPage2 = Page2Page;  
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }
+
 
 }

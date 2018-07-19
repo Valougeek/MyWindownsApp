@@ -13,6 +13,7 @@ import { ListPhotographers} from '../tools/listPhotographers';
 import { ListPhotos} from '../tools/listPhotos';
 import { PhotosPhotographerPage } from '../pages/photos-photographer/photos-photographer';
 import { BatteryStatus } from '@ionic-native/battery-status';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,12 @@ import { BatteryStatus } from '@ionic-native/battery-status';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      backButtonText: 'Back',
+      backButtonIcon: 'ios-arrow-back',
+      iconMode: 'md'
+     }),
+     IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

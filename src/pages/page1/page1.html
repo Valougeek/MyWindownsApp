@@ -4,10 +4,20 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<div class="all">
+  <div class="search-bar">
+    <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{item}}
+      </ion-item>
+    </ion-list>
 
-<ion-content padding class="card-background-page">
   <div *ngIf="listPhotos">
-    <ion-card *ngFor="let photo of listPhotos">
-      <img src="{{photo.urlPhoto}}">
-    </ion-card>
- 
+    <div *ngFor="let photo of listPhotos">
+      <img src="{{photo.urlPhoto}}" style="width: 250px;"  class="picture" imageViewer>
+    </div>
+  </div>
+
+  </div>
+</div>

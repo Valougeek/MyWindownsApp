@@ -23,9 +23,16 @@ export class HomePage {
   //   console.log('ionViewDidLoad HomePage');
   // }
 
-   goToPhotosPhotographer( item ) {
-     this.navCtrl.push(PhotosPhotographerPage, {
-        photographer: item
-     });
+  // Quand on clique sur l'un des photographes pour avoir accès à sa page
+  // on stoque un item que l'on va récupérer plus tard sur la page page1 qui changera
+  // d'apparence/contenu selon le photographe sélectionné.
+  goToPhotosPhotographer(item) {
+    this.navCtrl.push(PhotosPhotographerPage, {
+      photographer: item
+    });
   }
+
+ 
+
+  
 }

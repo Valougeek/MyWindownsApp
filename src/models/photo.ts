@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
-import { ListPhotos } from '../tools/listPhotos';
 
 @Injectable()
 export class Photo {
 
-    listPhotosPhotographers: Array<Photo> = new Array<Photo>();
+    public urlPhoto: string;
+    public nomPhoto: string;
+    public photographer: string;
 
-    constructor(public urlPhoto: string = "", public photographer: string = "") {
+    constructor(public urlphoto: string = "", public photo: string = "", public photograph: string = "") {
+    this.urlPhoto = urlphoto;
+    this.nomPhoto = photo;
+    this.photographer = photograph;
+
     }
     
-    photosPhotographer = function (nomPhotographer: string): void {
-        for (var i = 0; i < ListPhotos.length; i++) {
-            if (nomPhotographer == ListPhotos[i].photographer) {
-                this.listPhotosPhotographers.push(ListPhotos[i]);
-            }
-            console.log(this.listPhotosPhotographers);
-        }
-}
 }
