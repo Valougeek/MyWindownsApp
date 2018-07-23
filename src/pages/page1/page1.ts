@@ -22,5 +22,4 @@ export class Page1Page {
     this.navCtrl.push(SearchBarPage);
   }
 
-
 }
