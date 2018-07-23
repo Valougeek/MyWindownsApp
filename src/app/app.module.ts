@@ -14,6 +14,7 @@ import { ListPhotos} from '../tools/listPhotos';
 import { PhotosPhotographerPage } from '../pages/photos-photographer/photos-photographer';
 import { BatteryStatus } from '@ionic-native/battery-status';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { SearchBarPage } from '../pages/search-bar/search-bar';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     Page1Page,
     Page2Page,
     TabsPage,
-    PhotosPhotographerPage
+    PhotosPhotographerPage,
+    SearchBarPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     Page1Page,
     Page2Page,
     TabsPage,
-    PhotosPhotographerPage
+    PhotosPhotographerPage,
+    SearchBarPage
   ],
   providers: [
     StatusBar,

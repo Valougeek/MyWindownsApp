@@ -1,15 +1,45 @@
 page-page1 {
+
+    .title {
+        padding-top: 65px;
+    }
+
     .all{
         background-color: rgba(252, 252, 252, 0.959);
     }
-    .search-bar{
-        padding-top: 3.2em;
+
+    .search_button {
+        position: absolute;
+        margin-top: 102px;
+        margin-left: -47%;
+        border: solid 0.8px black;
+        z-index: 999;
     }
 
-    .picture{
+    .picture {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 0.5em;
+        margin-bottom: 10px;
     }
-    
-  
+
+    .info {
+        display: none; 
+        position: relative;
+        color: black;
+        top: 10%;
+        left: 20%;
+        font-size: 1.5em;
+    }
+
+    #picture:hover {
+        opacity: 0.5;
+        background: none; 
+        z-index: 500;
+    }
+
+    #picture:hover .info{
+        display:inline;
+        position: absolute; /* pour que le texte apparaisse sur la photo */
+        
+    }
+
 }
