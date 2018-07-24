@@ -1,7 +1,18 @@
-<ion-content padding class="card-background-page">
-    <ion-navbar color="light"></ion-navbar>
-      <div *ngIf="listPhotosPhotographers">
-            <div  *ngFor="let photo of listPhotosPhotographers">
-                <img  style="width: 80%;" class="picture" src="{{photo.urlPhoto}}"  imageViewer>
-            </div>
+<ion-header>
+  <button class="back_button" ion-button icon-only color="light" (click)="goToHomePage()" ng-hide="showDiv=false">
+    <ion-icon name="ios-arrow-back"></ion-icon>
+    Back
+  </button>
+</ion-header>
+
+<ion-content padding>
+        <div *ngIf="listPhotosPhotographers" class="list">
+                <div *ngFor="let photo of listPhotosPhotographers">
+                        <span id="picture">
+                                <img src="{{photo.urlPhoto}}" style="width: 80%;" style="width: 80%;" class="picture" imageViewer>
+                                <div class="info">{{photo.photographer}},
+                                        <i>{{photo.nomPhoto}}</i>
+                                </div>
+                        </span>
+                </div>
         </div>

@@ -1,22 +1,23 @@
 page-page1 {
 
     .title {
-        margin-top: 43px;
+        margin-top: 50px;
         display: block;
-        background-color: rgba(252, 252, 252, 0.959);
-        opacity: 1;
+        height: 33px;
     }
 
     .search_button {
+        background-color: rgba(252, 252, 252, 0.959);
         position: absolute;
-        margin-top: 50px;
+        margin-top: 55px;
         margin-left: -47%;
         border: solid 0.8px black;
         z-index: 999;
     }
 
     .list {
-        margin-top: -20px;
+        margin-top: -40px;
+        background-color: rgba(252, 252, 252, 0.959);
     }
     .picture {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

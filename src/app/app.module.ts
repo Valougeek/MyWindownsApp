@@ -12,9 +12,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ListPhotographers} from '../tools/listPhotographers';
 import { ListPhotos} from '../tools/listPhotos';
 import { PhotosPhotographerPage } from '../pages/photos-photographer/photos-photographer';
-import { BatteryStatus } from '@ionic-native/battery-status';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { SearchBarPage } from '../pages/search-bar/search-bar';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +51,6 @@ import { SearchBarPage } from '../pages/search-bar/search-bar';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListPhotographers,
     ListPhotos,
-    BatteryStatus
   ]
 })
 export class AppModule {}

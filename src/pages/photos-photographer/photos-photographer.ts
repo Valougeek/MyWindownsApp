@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ListPhotos } from '../../tools/listPhotos';
 import { Photo } from '../../models/photo';
 import { Photographer } from '../../models/photographer';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the PhotosPhotographerPage page.
@@ -50,4 +51,7 @@ export class PhotosPhotographerPage {
     this.navCtrl.pop();
   }
 
+  goToHomePage() {
+    this.navCtrl.push(HomePage);
+  }
 }

@@ -1,18 +1,37 @@
 page-photos-photographer {
-    .card-background-page{
-        background-color: rgba(252, 252, 252, 0.959);
-        margin-top: 2em;
+
+    .back_button {
+        margin-top: 40px;
+        margin-left: -80%;
     }
 
-    .nav{
-        background-color: rgba(252, 252, 252, 0.959);
-        margin-top: 6em;
+    .list {
+        background-color:  rgba(252, 252, 252, 0.959);
     }
 
-    .picture{
+    .picture {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 0.5em;
+        margin-bottom: 10px; /* espace entre les photos */
+    }
+    .info {
+        display: none; 
+        position: absolute;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        font-style: bold;
+        margin-top: 5%;
+        margin-left: -69%;
+    }
+
+    #picture:hover {
+        opacity: 0.7;
+        background: none; 
+    }
+
+    #picture:hover .info {
+        display:inline;
+        position: absolute; /* pour que le texte apparaisse sur la photo */
+        
     }
     
-
 }

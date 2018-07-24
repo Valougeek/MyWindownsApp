@@ -10,4 +10,13 @@ import { PhotosPhotographerPage } from './photos-photographer';
     IonicPageModule.forChild(PhotosPhotographerPage),
   ],
 })
-export class PhotosPhotographerPageModule {}
+export class PhotosPhotographerPageModule {
+
+
+
+
+goToHomePage() {
+
+}
+
+}
