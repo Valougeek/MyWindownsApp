@@ -1,37 +1,34 @@
+// Menu en bas du téléphone
+
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Page1Page } from '../page1/page1';
 import { Page2Page } from '../page2/page2';
 import { HomePage } from '../home/home';
-
-/**
- * Generated class for the TabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
+
 export class TabsPage {
 
+  // Création de 3 icones qui renvoient vers 3 pages différentes
   rootHome: any;
   rootPage1: any;
   rootPage2: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
+
+    // on indique vers quelle page on se rend
     this.rootHome = HomePage;
     this.rootPage1 = Page1Page;
     this.rootPage2 = Page2Page;  
-
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
+    // console.log('ionViewDidLoad TabsPage');
   }
-
 
 }

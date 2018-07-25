@@ -17,6 +17,8 @@ import { SearchBarPage } from '../pages/search-bar/search-bar';
 
 
 @NgModule({
+
+  // importer les pages
   declarations: [
     MyApp,
     HomePage,
@@ -26,6 +28,8 @@ import { SearchBarPage } from '../pages/search-bar/search-bar';
     PhotosPhotographerPage,
     SearchBarPage
   ],
+
+  
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
@@ -36,6 +40,7 @@ import { SearchBarPage } from '../pages/search-bar/search-bar';
      IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
+  // importer ici les Pages
   entryComponents: [
     MyApp,
     HomePage,
@@ -45,6 +50,7 @@ import { SearchBarPage } from '../pages/search-bar/search-bar';
     PhotosPhotographerPage,
     SearchBarPage
   ],
+  // importer ici les API Native
   providers: [
     StatusBar,
     SplashScreen,

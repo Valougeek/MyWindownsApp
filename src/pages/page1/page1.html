@@ -2,7 +2,7 @@
   <ion-title class="title">Gallery</ion-title>
 </ion-header>
 
-<button class="search_button" ion-button icon-only small color="light" (click)="goToSearchBarPage()" ng-hide="showDiv=false">
+<button class="search_button" ion-button icon-only small color="light" (click)="goToSearchBarPage()" >
   <ion-icon name="search"></ion-icon>
 </button>
 
@@ -10,8 +10,14 @@
   <div *ngIf=listPhotos class="list">
     <div *ngFor="let photo of listPhotos">
       <span id="picture">
-        <img src="{{photo.urlPhoto}}" style="width: 80%;" class="picture"imageViewer>
+        <!-- imageViewer permet de cliquer sur une photo pour pouvoir la voir en gros plan et zoomer dessus -->
+        <img src="{{photo.urlPhoto}}" style="width: 80%;" class="picture" imageViewer>
         <div class="info">{{photo.photographer}}, <i>{{photo.nomPhoto}}</i></div>
       </span>
     </div>
   </div>
+
+  <!-- astuce: pour pouvoir afficher un titre de légende sur chaque photo lorsqu'on y passe la souris
+  j'ai crée une div info dans une div picture
+  au début: info est en display none 
+  au passage de la souris: display inline (voir scss) -->

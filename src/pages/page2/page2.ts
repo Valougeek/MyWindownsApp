@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BatteryStatus } from '@ionic-native/battery-status';
+import { IonicPage, NavController,  } from 'ionic-angular';
 
 /**
  * Generated class for the Page2Page page.
@@ -17,20 +16,13 @@ import { BatteryStatus } from '@ionic-native/battery-status';
 export class Page2Page {
 
   stat;
+// Page pour avoir recours à une API Native pour prnedre des photos
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private batteryStatus: BatteryStatus) {
-  this.getSatus();
+  constructor(public navCtrl: NavController) {
 }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Page2Page');
   }
-
- getSatus() {
-   this.batteryStatus.onChange().subscribe( status => {
-     this.stat = status;
-
-   })
- }
 
 }

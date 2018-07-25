@@ -39,9 +39,10 @@ page-page1 {
         background: none; 
     }
 
+    /* pour afficher le texte de légende sur chaque photo */
     #picture:hover .info{
         display:inline;
-        position: absolute; /* pour que le texte apparaisse sur la photo */
+        position: absolute; // permet d'avoir la légende sur la photo et non à côté
         
     }
 

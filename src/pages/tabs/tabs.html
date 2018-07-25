@@ -4,10 +4,14 @@
     <ion-title>PhotoApp</ion-title>
   </ion-navbar>
 
-</ion-header >
+</ion-header>
 
 <ion-tabs color="dark">
-  <ion-tab tabIcon="home" [root]="rootHome" ></ion-tab>
-  <ion-tab tabIcon="albums" [root]="rootPage1" ></ion-tab>
-  <ion-tab tabIcon="camera" [root]="rootPage2" ></ion-tab>
+  <ion-tab tabIcon="home" [root]="rootHome"></ion-tab>
+  <ion-tab tabIcon="albums" [root]="rootPage1"></ion-tab>
+  <ion-tab tabIcon="camera" [root]="rootPage2"></ion-tab>
 </ion-tabs>
+
+<!-- [root]="rootHome" 
+manière de faire un LIEN ENTRE 2 PAGES pour un menu TABS
+on redirige vers une variable crée dans le .ts qui elle-même renvoie vers la page choisie-->

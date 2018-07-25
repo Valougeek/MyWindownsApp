@@ -1,5 +1,7 @@
+// Page qui permet de chercher une photo par son nom depuis la librairie
+
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { ListPhotos } from '../../tools/listPhotos';
 import { Photo } from '../../models/photo';
 import { ViewController } from 'ionic-angular';
@@ -10,32 +12,27 @@ import { Page1Page } from '../page1/page1';
   selector: 'page-search-bar',
   templateUrl: 'search-bar.html',
 })
+
 export class SearchBarPage {
 
   public listPhotos: Array<Photo> = new Array<Photo>();
   public items: Array<string> = new Array<string>();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public list:ListPhotos, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public list: ListPhotos, public viewCtrl: ViewController) {
     this.listPhotos = list.listPhotos;
-    //console.log(this.listPhotos);
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad SearchBarPage');
-    //this.initializeItems();
     this.viewCtrl.setBackButtonText('Back');
   }
 
-  popView() {
-    this.navCtrl.pop();
-  }
-
+  // création de la liste de noms de photos de la barre de recherche
   initializeItems() {
     this.items = [];
     for (let Photo of this.listPhotos) {
-    this.items.push(Photo.nomPhoto);
+      this.items.push(Photo.nomPhoto);
+    }
   }
-}
 
   getItems(ev: any) {
     // Reset items back to all of the items

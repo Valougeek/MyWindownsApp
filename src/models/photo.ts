@@ -1,3 +1,5 @@
+//équivaut à une classe java
+
 import { Injectable } from '@angular/core';
 
 @Injectable()
